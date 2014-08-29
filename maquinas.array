@@ -1,0 +1,12 @@
+#!/bin/bash
+# IP's o nombres de host o usuaria@ip/host de las máquinas/contenedores
+# en caso de que alguna sirva ssh en un puerto diferente a 22:
+# puede usar la definición "192.168.1.69 -p 88"
+# por ejemplo, para root: "192.168.1.69" para un usuario "juanito@192.168.1.69" 
+# para un usuario y con puerto no 22 "juanito@192.168.1.69 -p 78"
+
+maquinas=(
+	"pepi@192.168.1.69 -p 879"
+	"127.0.0.1"
+)
+
