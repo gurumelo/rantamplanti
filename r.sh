@@ -18,7 +18,7 @@ then
 	if [ $numerodelineas != $numerodemaquinas ]
 	then
 		
-		echo "El número de conjuntos de variables($numerodelineas) en $script/convars, no coincide con el número de máquinas($numerodemaquinas)"
+		echo -e "\e[94mEl número de conjuntos de variables($numerodelineas) en $script/convars.csv, no coincide con el número de máquinas($numerodemaquinas)"
 		exit
 	else
 		incrementoregistro=1
