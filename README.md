@@ -40,11 +40,9 @@
 
 ## Plantilla de scripts sin variables
 
-## Plantilla de scripts con variables
-
+## Plantilla de scripts con variables fijas o dinámicas para cada máquina
 
 ## Escenario 1: Ejecutar sobre una sola máquina
-
 
 ## Escenario 2: Ejecutar sobre dos o más máquinas
 
