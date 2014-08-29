@@ -30,7 +30,11 @@
                                  :;,' SSh
                                  `'
 
-## Estructura de archivos y explicación
+## Estructura de archivos, directorios, convenciones y explicaciones
+
+
+## Reuniendo máquinas
+
 
 ## Ejecución
 
