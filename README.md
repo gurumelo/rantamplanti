@@ -38,9 +38,12 @@
 	ls
 	r.sh maquinas.array plantis/
 
-###### **r.sh** es el script que ejecuta las plantillas/scripts
-###### **maquinas.array** es un archivo con un array, con un elemento apuntando a cada máquina sobre la que quieras actuar
-###### **plantis/** directorio que contiene las plantillas/scripts que serán ejecutados en las máquinas especificadas en maquinas.array
+**r.sh** 
+######Es el script que ejecuta las plantillas/scripts, admite como parámetro el nombre del directorio de la plantilla/script
+**maquinas.array** 
+######Es un archivo con un array, con elementos apuntando a cada máquina sobre la que quieras actuar
+**plantis/** 
+######Directorio que contiene las plantillas/scripts que serán ejecutados en las máquinas especificadas en maquinas.array
 
 ## Reuniendo máquinas
 
