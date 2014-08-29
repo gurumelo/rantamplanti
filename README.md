@@ -46,17 +46,43 @@
 ######Directorio que contiene las plantillas/scripts que serán ejecutados en las máquinas especificadas en maquinas.array
 
 ## Reuniendo máquinas
+####Probándolo en local
+	apt-get install ssh
+#####Instalamos el metapaquete ssh que nos trae el cliente ssh y el servidor ssh
+#####Abrimos maquinas.array e introducimos, en este caso, la única máquina sobre la que se quiere actuar
+######El nombre del array siempre debe ser, maquinas
+	nano maquinas.array
+	maquinas=(
+        	"127.0.0.1"
+	)
+######Y guardamos
 
+##Ejecución
+#####Para ver las plantillas/scripts disponibles
+	ls plantis
+	apt  convars
+#####Nos decidimos por uno de ellos y lo pasamos como primer parámetro a r.sh
+	./r.sh apt
+#####De este modo se habrá ejecutado el script apt, sobre la única máquina que hemos definido en maquinas.array
 
-## Ejecución
+##Ejecutando plantilla/script simple sobre más de una máquina
+#####Añadimos más referencias a máquinas dentro de maquinas.array. Pueden ser ip's, hosts, usuaria@ip/host, usuaria@ip/host -p XXXX; en el caso de que el servidor ssh de esa máquina no opere en el puerto 22... posibilidades
+	nano maquinas.array
+	maquinas=(
+		'127.0.0.1'
+		'root@192.168.1.69 -p 867'
+	)
+#####Y ejecutamos, en este caso, el script se aplicará a las dos máquinas/contenedores, o tantas como definamos en el array
+	./r.sh apt
+
 
 ## Plantilla de scripts sin variables
 
-## Plantilla de scripts con variables fijas o dinámicas para cada máquina
+## Plantilla de scripts con variables para cada máquina
 
-## Escenario 1: Ejecutar sobre una sola máquina
+## Creación de plantillas/scripts
 
-## Escenario 2: Ejecutar sobre dos o más máquinas
+
 
 
 
