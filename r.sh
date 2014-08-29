@@ -13,7 +13,7 @@ separador=',,'
 # si es una plantilla con conjuntos de variables csv para cada una, se opta por CSV porque indirección en bash es metafísica imposible.
 if [ -f $script/convars.csv ]
 then
-	numerodelineas=$( wc -l < $script/convars.csv)
+	numerodelineas=$( wc -l < $script/convars.csv )
 	numerodemaquinas=${#maquinas[@]}
 	if [ $numerodelineas != $numerodemaquinas ]
 	then
@@ -30,7 +30,7 @@ then
 			echo -e "\e[5m:)"
 
 			# Iterar tantas veces como campos haya para hacer plantilla con sed
-			cuantoscampos=$( awk -F ",," NR==$incrementoregistro'{ print NF }' $script/convars.csv)
+			cuantoscampos=$( awk -F ",," NR==$incrementoregistro'{ print NF }' $script/convars.csv )
 			comandosed=''
 			for (( i=1;i<=$cuantoscampos;i++ ))
 			do
