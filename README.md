@@ -36,7 +36,11 @@
 	git clone https://github.com/gurumelo/rantamplanti.git
 	cd rantamplanti
 	ls
-	r.sh maquinas.array planti/
+	r.sh maquinas.array plantis/
+
+###### **r.sh** es el script que ejecuta las plantillas/scripts
+###### **maquinas.array** es un archivo con un array, con un elemento apuntando a cada máquina sobre la que quieras actuar
+###### **plantis/** directorio que contiene las plantillas/scripts que serán ejecutados en las máquinas especificadas en maquinas.array
 
 ## Reuniendo máquinas
 
