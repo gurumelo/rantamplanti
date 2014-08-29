@@ -31,7 +31,12 @@
                                  `'
 
 ## Estructura de archivos, directorios, convenciones y explicaciones
-
+##### Bajando
+	apt-get install git
+	git clone https://github.com/gurumelo/rantamplanti.git
+	cd rantamplanti
+	ls
+	r.sh maquinas.array planti/
 
 ## Reuniendo máquinas
 
