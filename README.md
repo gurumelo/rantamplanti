@@ -122,7 +122,7 @@ Creamos el archivo script.sh por convención y dentro de el, ponemos una orden s
 nos situamos de nuevo sobre la raiz de rantamplanti y ejecutamos con. ./r.sh soyunaplantilla Y hará efecto sobre las máquinas que tengamos en el array maquinas de maquinas.array
 
 ###Script/plantilla con constantes	
-
+####Escribe una sola plantilla, ejecuta en muchas máquinas
 	cd plantis
 	mkdir plantillaconstante
 	cd plantillaconstante
