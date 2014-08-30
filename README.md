@@ -109,8 +109,9 @@ Ejemplificado en gráfica de coordenadas, equivaldría a:
 	máquina2 →	otrab1,,otrab2,,otrab3
 	máquina3 →	hamc1,,hamc2,,hamc3
 
-Quedando convars.csv comoc
-	onsta1,,consta2,,conta3
+######Quedando convars.csv así
+
+	consta1,,consta2,,conta3
 	otrab1,,otrab2,,otrab3
 	hamc1,,hamc2,,hamc3
 
