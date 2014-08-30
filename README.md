@@ -1,5 +1,5 @@
 # Rantamplanti
-## Script para ejecutar script(de una sola vez) sobre un conjunto de máquinas/contenedores con ssh, o tostadoras, lavadoras, frigoríficos y otros electrodomésticos con ssh
+## Script para ejecutar script simultáneamente(de una sola vez) sobre un conjunto de máquinas/contenedores con ssh, o tostadoras, lavadoras, frigoríficos y otros electrodomésticos con ssh
                            _,.
                         ,''   `.     __....__ 
                       ,'        >.-''        ``-.__,)
