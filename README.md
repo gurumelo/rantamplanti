@@ -77,22 +77,50 @@
 
 
 ##Script sin constantes para cada máquina
-#####Hasta ahora hemos ejecutado el script 'apt', primero sobre una máquina local, luego sobre local y una remota. Es un script simple,
-sin constantes diferentes para cada máquina, en un script común pueden usarse variables dentro de script.sh, siempre y cuando éstas se amolden a la situación de todas las máquinas.
+#####Hasta ahora hemos ejecutado el script 'apt', primero sobre una máquina local, luego sobre local y una remota. Es un script simple.
+Sin constantes diferentes para cada máquina, en un script común pueden usarse variables dentro de script.sh, siempre y cuando éstas se amolden a la situación de todas las máquinas.
 En el último punto se ve como crear plantillas/scripts.
 
 	ls plantis
-	cd apt
+	cd plantis/apt
 	ls
 	script.sh
 
 Por convención el script principal de una plantilla, siempre se llamará script.sh. Ahí escribimos las acciones a ejecutar y poco más que reseñar
 
 ##Plantilla/script con constantes para cada máquina
-#####Puede darse el caso que queramos pasar a un script constantes diferentes para cada máquina, por ejemplo, queremos crear un archivo en cada una de ellas pero que se llamen
-diferente según la máquina
+#####Puede darse el caso que queramos pasar a un script constantes diferentes para cada máquina, por ejemplo, queremos crear un archivo en cada una de ellas pero que se llamen diferente según la máquina.
+Como ejemplo de ello existe la plantilla convars
+
+	ls plantis
+	cd plantis/convars
+	ls
+	convars.csv script.sh
+
+Nuevamente aparece script.sh, la plantilla principal siempre se llama script.sh. Ahí escribimos las órdenes. Y convars.csv, ahí irán las constantes que queramos para cada máquina.
+Cada línea/registro de convars.csv, siempre debe llamarse así el nombre del archivo de las constantes, convars.csv, convars.csv, convars.csv;... cada línea hace referencia al conjunto de constantes para una máquina, 1 línea de convars.csv se aplicará al primer elemento del array máquinas, segunda línea, será el conjunto de constantes que se aplican a script.sh y se ejecuta sobre la segunda máquina del array máquinas, así sucesivamente. Tantas líneas en convars.csv como máquinas tengamos. Cada constante se separa con ,, el separador, si quiere usar otro, puede definirlo en r.sh.
+
+#####Si usted se pone a escribir una plantilla para más de una máquina, no piense mucho en esta chapuza. Escriba script.sh como si lo hiciese para una sola máquina y cada vez que se encuentre ante algo que será una constante diferente para cada máquina escriba $VAR1, $VAR2, $VAR3 y así sucesivamente, usando como convención $VARX, siendo X un número correlativo, empezando en 1 y tendiendo hacia "un círculo que se expande hacia el infinito es una línea?"
+
 
 ##Creación de plantillas/scripts
+
+###Script simple
+	cd plantis
+	mkdir soyunaplantilla
+	cd soyunaplantilla
+	nano script.sh
+		uptime
+	cd ..
+	cd ..
+	./r.sh soyunaplantilla
+
+#####De esta forma creamos un script simple. Dentro del directorio plantis/ creamos un directorio con el nombre que queramos dar. mkdir soyunaplantilla.
+Entramos dentro del directorio creado. cd soyunaplantilla. 
+Creamos el archivo script.sh por convención y dentro de el, ponemos una orden simple, por probar. uptime. que devuelve el tiempo que la máquina lleva encendida. Guardamos
+nos situamos de nuevo sobre la raiz de rantamplanti y ejecutamos con. ./r.sh soyunaplantilla y hará efecto sobre las máquinas que tengamos en el array maquinas de maquinas.array
+
+###Script/plantilla con constantes	
 
 
 
