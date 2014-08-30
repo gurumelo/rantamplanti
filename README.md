@@ -102,6 +102,18 @@ Cada línea/registro de convars.csv, siempre debe llamarse así el nombre del ar
 
 #####Si usted se pone a escribir una plantilla para más de una máquina, no piense mucho en esta chapuza. Escriba script.sh como si lo hiciese para una sola máquina y cada vez que se encuentre ante algo que será una constante diferente para cada máquina escriba $VAR1, $VAR2, $VAR3 y así sucesivamente, usando como convención $VARX, siendo X un número correlativo, empezando en 1 y tendiendo hacia "un círculo que se expande hacia el infinito es una línea?"
 
+Ejemplificado en gráfica de coordenadas, equivaldría a:
+
+		 $VAR1   |  $VAR2 | $VAR3
+	máquina1 consta1,,consta2,,conta3
+	máquina2 otrab1,,otrab2,,otrab3
+	máquina3 hamc1,,hamc2,,hamc3
+
+Quedando convars.csv como
+	consta1,,consta2,,conta3
+	otrab1,,otrab2,,otrab3
+	hamc1,,hamc2,,hamc3
+
 
 ##Creación de plantillas/scripts
 
