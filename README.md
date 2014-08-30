@@ -1,5 +1,5 @@
 # Rantamplanti
-## Script para ejecutar script(de una sola vez) sobre un conjunto de contenedores LXC con ssh, o tostadoras, lavadoras, frigoríficos y otros electrodomésticos con ssh
+## Script para ejecutar script(de una sola vez) sobre un conjunto de máquinas/contenedores con ssh, o tostadoras, lavadoras, frigoríficos y otros electrodomésticos con ssh
                            _,.
                         ,''   `.     __....__ 
                       ,'        >.-''        ``-.__,)
@@ -48,7 +48,7 @@
 ## Reuniendo máquinas
 ####Probándolo en local
 	apt-get install ssh
-#####Instalamos el metapaquete ssh que nos trae el cliente ssh y el servidor ssh
+#####Instalamos el metapaquete ssh que hace referencia al cliente ssh y al servidor ssh
 #####Abrimos maquinas.array e introducimos, en este caso, la única máquina sobre la que se quiere actuar
 ######El nombre del array siempre debe ser, maquinas
 	nano maquinas.array
@@ -72,15 +72,27 @@
 		'127.0.0.1'
 		'root@192.168.1.69 -p 867'
 	)
-#####Y ejecutamos, en este caso, el script se aplicará a las dos máquinas/contenedores, o tantas como definamos en el array
+#####Y ejecutamos. El script se aplicará en las dos máquinas/contenedores, o tantas como definamos en el array
 	./r.sh apt
 
 
-## Plantilla de scripts sin variables
+##Script sin constantes para cada máquina
+#####Hasta ahora hemos ejecutado el script 'apt', primero sobre una máquina local, luego sobre local y una remota. Es un script simple,
+sin constantes diferentes para cada máquina, en un script común pueden usarse variables dentro de script.sh, siempre y cuando éstas se amolden a la situación de todas las máquinas.
+En el último punto se ve como crear plantillas/scripts.
 
-## Plantilla de scripts con variables para cada máquina
+	ls plantis
+	cd apt
+	ls
+	script.sh
 
-## Creación de plantillas/scripts
+Por convención el script principal de una plantilla, siempre se llamará script.sh. Ahí escribimos las acciones a ejecutar y poco más que reseñar
+
+##Plantilla/script con constantes para cada máquina
+#####Puede darse el caso que queramos pasar a un script constantes diferentes para cada máquina, por ejemplo, queremos crear un archivo en cada una de ellas pero que se llamen
+diferente según la máquina
+
+##Creación de plantillas/scripts
 
 
 
