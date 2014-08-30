@@ -115,12 +115,37 @@ Cada línea/registro de convars.csv, siempre debe llamarse así el nombre del ar
 	cd ..
 	./r.sh soyunaplantilla
 
-#####De esta forma creamos un script simple. Dentro del directorio plantis/ creamos un directorio con el nombre que queramos dar. mkdir soyunaplantilla.
+#####De esta forma creamos un script simple. Dentro del directorio plantis/ creamos un directorio con el nombre que queramos dar. mkdir soyunaplantilla. Lo puedes complicar tanto como quieras.
+
 Entramos dentro del directorio creado. cd soyunaplantilla. 
-Creamos el archivo script.sh por convención y dentro de el, ponemos una orden simple, por probar. uptime. que devuelve el tiempo que la máquina lleva encendida. Guardamos
-nos situamos de nuevo sobre la raiz de rantamplanti y ejecutamos con. ./r.sh soyunaplantilla y hará efecto sobre las máquinas que tengamos en el array maquinas de maquinas.array
+Creamos el archivo script.sh por convención y dentro de el, ponemos una orden simple, por probar. uptime. Que devuelve el tiempo que la máquina/s lleva encendida. Guardamos,
+nos situamos de nuevo sobre la raiz de rantamplanti y ejecutamos con. ./r.sh soyunaplantilla Y hará efecto sobre las máquinas que tengamos en el array maquinas de maquinas.array
 
 ###Script/plantilla con constantes	
+
+	cd plantis
+	mkdir plantillaconstante
+	cd plantillaconstante
+	nano script.sh
+		echo "$VAR1" >> $VAR2
+	nano convars.csv
+		contenido1,,archivo1
+		contenido2,,archivo2
+	cd ../..
+	./r.sh plantillaconstante
+
+##### Entramos dentro de plantis y creamos el directorio plantillaconstante. Entramos dentro de plantillaconstante.
+
+Creamos script.sh y escribimos el script como vayamos imaginando, cada vez que requieras de una constante específica para cada máquina, simplemente, comience con *$VAR1* , y así sucesivamente
+cada vez que lo requiera *$VAR2* *$VAR3* ...
+
+Los valores de esas marcas irán en convars.csv . Recordando. Una línea = un conjunto de valores para una máquina , Primera columna = $VAR1 , Segunda columna = $VAR2 ...
+Y ejecutamos... 
+
+
+####Futuribles
+- crear script de generación de llaves ssh
+- crear repositorio específico de plantillas
 
 
 

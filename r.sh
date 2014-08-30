@@ -43,12 +43,12 @@ then
 			eval sed"$comandosed" "$script"/script.sh > "$script"/script"$incrementoregistro".sh
 
 			# Precaución amigo conductor
-			ssh $maquina 'bash -s' < $script/script$incrementoregistro.sh
+			#ssh $maquina 'bash -s' < $script/script$incrementoregistro.sh
 
 			echo -e "\e[92m$1 Aplicado a $maquina"
 			echo -e "\e[95m###################################################"
 			# Se incrementa incremento para leer siguiente conjunto de variables para la siguiente máquina
-			rm $script/script$incrementoregistro.sh
+			#rm $script/script$incrementoregistro.sh
 			let "incrementoregistro+=1"
 		done
 	fi
