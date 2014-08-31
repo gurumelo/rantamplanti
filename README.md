@@ -32,18 +32,19 @@
 
 ## Estructura de archivos, directorios, convenciones y explicaciones
 ##### Bajando
+```bash
 	apt-get install git
 	git clone https://github.com/gurumelo/rantamplanti.git
 	cd rantamplanti
 	ls
 	r.sh maquinas.array plantis/
-
+```
 **r.sh** 
-######Es el script que ejecuta las plantillas/scripts, admite como parámetro el nombre del directorio de la plantilla/script
+Es el script que ejecuta las plantillas/scripts, admite como parámetro el nombre del directorio de la plantilla/script
 **maquinas.array** 
-######Es un archivo con un array, con elementos apuntando a cada máquina sobre la que quieras actuar
+Es un archivo con un array, con elementos apuntando a cada máquina sobre la que quieras actuar
 **plantis/** 
-######Directorio que contiene las plantillas/scripts que serán ejecutados en las máquinas especificadas en maquinas.array
+Directorio que contiene las plantillas/scripts que serán ejecutados en las máquinas especificadas en maquinas.array
 
 ## Reuniendo máquinas
 ####Probándolo en local
