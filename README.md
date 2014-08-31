@@ -110,10 +110,11 @@ Cada línea/registro de convars.csv, siempre debe llamarse así el nombre del ar
 
 Ejemplificado en gráfica de coordenadas, equivaldría a:
 
-				$VAR1   |  $VAR2 | $VAR3
-	máquina1 →	consta1,,consta2,,conta3
-	máquina2 →	otrab1,,otrab2,,otrab3
-	máquina3 →	hamc1,,hamc2,,hamc3
+	| | $VAR1  | $VAR2  | $VAR3
+	|-| ------ | ------ | ------
+	| máquina1 →  |	consta1,,  | consta2,,  | conta3
+	| máquina2 →  |	otrab1,,  | otrab2,,  | otrab3
+	| máquina3 →  |	hamc1,,  | hamc2,,  | hamc3
 
 ######Quedando convars.csv así
 
